@@ -1,75 +1,3 @@
-@keyframes appear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.delay1 {
-  animation-delay: 0.1s;
-}
-
-.delay2 {
-  animation-delay: 0.3s;
-}
-
-.delay3 {
-  animation-delay: 0.6s;
-}
-
-.delay4 {
-  animation-delay: 0.9s;
-}
-
-@keyframes progress {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
-@keyframes rebound {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(30px);
-  }
-  75% {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes loader {
-  0% {
-    background-color: #c4c3c0;
-  }
-  25% {
-    background-color: #c4c3c0;
-  }
-  50% {
-    background-color: #c4c3c0;
-  }
-  80% {
-    background-color: rgba(196, 195, 192, 0.5);
-  }
-  100% {
-    background-color: rgba(196, 195, 192, 0.5);
-    visibility: hidden;
-  }
-}
-@keyframes fill {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 h1 {
   font-family: "Shrikhand", sans-serif;
   font-size: 30px;
@@ -92,24 +20,10 @@ a {
   text-decoration: none;
 }
 
-.btn {
-  display: block;
-  width: max-content;
-  margin: auto;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  color: white;
-  border-radius: 30px;
-  box-shadow: 2px 2px 10px #c4c3c0;
-  padding: 15px 20px;
-  font-weight: bold;
-  transform: scale(1);
-  transition: transform 500ms;
-  opacity: 1;
-}
-.btn:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-  box-shadow: 2px 2px 20px black;
+img {
+  max-width: 100%;
+  height: auto;
+  padding: 0;
 }
 
 .heart {
@@ -122,86 +36,6 @@ a {
   font-weight: bold;
 }
 
-.icons {
-  color: white;
-  font-size: 20px;
-  opacity: 0;
-  transform: rotate(0deg);
-  transition: all 0.7s ease-in-out;
-}
-
-@keyframes appear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.delay1 {
-  animation-delay: 0.1s;
-}
-
-.delay2 {
-  animation-delay: 0.3s;
-}
-
-.delay3 {
-  animation-delay: 0.6s;
-}
-
-.delay4 {
-  animation-delay: 0.9s;
-}
-
-@keyframes progress {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
-@keyframes rebound {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(30px);
-  }
-  75% {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes loader {
-  0% {
-    background-color: #c4c3c0;
-  }
-  25% {
-    background-color: #c4c3c0;
-  }
-  50% {
-    background-color: #c4c3c0;
-  }
-  80% {
-    background-color: rgba(196, 195, 192, 0.5);
-  }
-  100% {
-    background-color: rgba(196, 195, 192, 0.5);
-    visibility: hidden;
-  }
-}
-@keyframes fill {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 h1 {
   font-family: "Shrikhand", sans-serif;
   font-size: 30px;
@@ -224,67 +58,21 @@ a {
   text-decoration: none;
 }
 
-.btn {
-  display: block;
-  width: max-content;
-  margin: auto;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  color: white;
-  border-radius: 30px;
-  box-shadow: 2px 2px 10px #c4c3c0;
-  padding: 15px 20px;
-  font-weight: bold;
-  transform: scale(1);
-  transition: transform 500ms;
-  opacity: 1;
-}
-.btn:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-  box-shadow: 2px 2px 20px black;
+img {
+  max-width: 100%;
+  height: auto;
+  padding: 0;
 }
 
-.heart {
-  font-size: 20px;
-  color: grey;
-}
-.heart:hover {
-  animation: fill 1.5s ease-out;
-  background: linear-gradient(#FF79DA, #9356DC);
-  font-weight: bold;
-}
-
-.badge_new {
-  display: inline-block;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  width: 80px;
-  background-color: #99E2D0;
-  color: #008766;
-  position: absolute;
-  right: 10px;
-  top: 15px;
-}
-
-.icons {
-  color: white;
-  font-size: 20px;
-  opacity: 0;
-  transform: rotate(0deg);
-  transition: all 0.7s ease-in-out;
-}
-
-.pr_header {
+.pResto {
   padding: 20px 25px 10px 25px;
   display: flex;
   align-items: center;
 }
-.pr_header__logo {
+.pResto__logo {
   margin: auto;
 }
-.pr_header__back {
+.pResto__liens {
   font-size: 20px;
 }
 
@@ -292,92 +80,6 @@ a {
   max-height: 250px;
   width: 100%;
   object-fit: cover;
-}
-
-.pr_main {
-  margin-top: -30px;
-  position: relative;
-  border-radius: 30px 30px 0 0;
-  background-color: #f6f6f6;
-  padding: 35px 15px 80px 15px;
-}
-.pr_main__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 45px;
-}
-.pr_main__header__title {
-  font-family: "Shrikhand", sans-serif;
-}
-
-.dishes {
-  padding-bottom: 40px;
-}
-.dishes__header {
-  margin-bottom: 25px;
-}
-.dishes__header ::after {
-  content: "";
-  display: block;
-  margin-top: 5px;
-  width: 40px;
-  height: 3px;
-  background-color: #99E2D0;
-  animation: progress 2s;
-  animation-fill-mode: both;
-  transform: scale(0);
-}
-.dishes__card {
-  height: 70px;
-  width: 100%;
-  padding-left: 10px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  overflow: hidden;
-  box-shadow: 2px 2px 10px #c4c3c0;
-  animation: appear 0.5s;
-  animation-timing-function: cubic-bezier(0.57, -0.3, 0.36, 1.2);
-  transform: scale(0);
-  animation-fill-mode: both;
-}
-.dishes__card__txt {
-  width: 90%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.dishes__card__txt--over {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.dishes__card__price {
-  margin-left: 10px;
-}
-.dishes__card__check {
-  height: 70px;
-  width: 60px;
-  opacity: 0;
-  background-color: #99E2D0;
-  margin-left: 25px;
-  margin-right: -70px;
-  border-radius: 0 10px 10px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.7s ease-in-out;
-}
-.dishes__card:hover :nth-child(3) {
-  opacity: 1;
-  margin-right: 0px;
-}
-.dishes__card:hover .check_icons {
-  opacity: 1;
-  transform: rotate(-360deg);
 }
 
 .spinner {
