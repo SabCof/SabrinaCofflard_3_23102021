@@ -1,7 +1,7 @@
 @import "./Utils/variables", "./Utils/mixins", "./Utils/animations"; 
 @import "./Base/typography", "./Base/reset";
-@import "./Components/btn", "./Components/heart", "./Components/_icons";
-@import "./Pages/home","./Pages/resto";
+@import "./Components/btn", "./Components/heart", "./Components/badge_new", "./Components/icons";
+@import "./Pages/resto";
 
 
 .spinner {
