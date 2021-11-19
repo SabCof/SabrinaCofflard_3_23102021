@@ -1,32 +1,6 @@
-h1 {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 30px;
-}
-
-h2 {
-  font-size: 25px;
-}
-
 * {
   font-family: "Roboto", sans-serif;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  padding: 0;
-}
-
-
 
 h1 {
   font-family: "Shrikhand", sans-serif;
@@ -35,43 +9,46 @@ h1 {
 
 h2 {
   font-size: 25px;
+  margin: 1em;
 }
 
-* {
-  font-family: "Roboto", sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  padding: 0;
-}
-
-.pResto {
-  padding: 20px 25px 10px 25px;
-  display: flex;
-  align-items: center;
-}
-.pResto__logo {
-  margin: auto;
-}
-.pResto__liens {
+h3 {
   font-size: 20px;
+  margin: 1em 0 1em 0;
 }
 
-.pr_img {
-  max-height: 250px;
-  width: 100%;
-  object-fit: cover;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80px;
+  padding: 10px;
+  margin: 2em;
+}
+
+.heart {
+  font-size: 20px;
+  color: grey;
+}
+.heart:hover {
+  animation: fill 1.5s ease-out;
+  background: linear-gradient(#FF79DA, #9356DC);
+  font-weight: bold;
 }
 
 .spinner {
@@ -119,6 +96,182 @@ img {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+}
+/* html 
+  <div class="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 25px;
+  margin: 1em;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 1em 0 1em 0;
+}
+
+.flexCentre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.flexAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flexColumnCentre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexColumnAround {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.flexColumnBetween {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80px;
+  padding: 10px;
+  margin: 2em;
+}
+
+.heart {
+  font-size: 20px;
+  color: grey;
+}
+.heart:hover {
+  animation: fill 1.5s ease-out;
+  background: linear-gradient(#FF79DA, #9356DC);
+  font-weight: bold;
+}
+
+.mainheader {
+  position: relative;
+  width: 100%;
+  padding: 1rem 1rem 0.2rem 1rem;
+  border-bottom: 2px solid #d5d5d5;
+  text-align: center;
+}
+
+.recherche {
+  height: 50px;
+  width: 100%;
+  font-size: 18px;
+  color: black;
+  font-weight: bolder;
+  background-color: #a7a0a0;
+  text-align: center;
+}
+
+.explore {
+  text-align: center;
+  background-color: #ebedef;
+}
+
+ol {
+  display: list-item;
+  list-style-type: decimal;
+  list-style-position: outside;
+  font-size: 1rem;
+}
+
+li {
+  box-sizing: border-box;
+  background-color: #F5EEF8;
+  height: 2rem;
+  padding: 1% 0 1% 1%;
+  border-radius: 20px;
+  margin: 1em;
+}
+li ::marker {
+  background-color: #FF79DA;
+}
+
+.fonct {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+.fonct .number {
+  display: flex;
+  justify-content: flex-start;
+  border: 2px solid #f2f2f2;
+  padding: 1em;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.icone {
+  width: 50px;
+}
+
+.restau .card {
+  margin: 10px 0;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 1%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 1px #f2f2f2;
+}
+.restau .card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=styles.css.map */

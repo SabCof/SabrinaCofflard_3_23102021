@@ -14,52 +14,52 @@
     </head>
     <body> 
         <!--loader-->
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
-        </div>
+       
           
           <!--header-->
         <header class="mainheader">
-            <h1>ohmyfood</h1>>
+            <h1>ohmyfood</h1>
         </header>
-       
-        <main> 
-            <section Reservation>
-                <div Localisation>
+
+         <main>
+                  
+                <div class="recherche flexCentre" >
                     <i class="fas fa-map-marker-alt"></i>
                     <span>Paris, Belleville</span>
                 </div>
-                <div Reserver>
+            <section class="explore flexColumnCentre">
+                <div>
                     <h2>Réserver le menu qui<br>vous convient</h2>
                     <p>Découvrez des restaurants d'exceptions, sélectionner par nos soins.</p>
-                    <a>Explorer nos restaurants</a>
                 </div>
+                    <button class="btn " type="submit"> Explorer nos restaurants
+                    </button>
+                
             </section>
-            <section Fonction>
-                <div foctionnement>
+
+            <article class="fonct">
+                
                     <h3>Fonctionnement</h3>
-                    <ol etapes>
-                        <li>
-                            <i class="fas fa-mobile-alt"></i>
+                    <ol>
+                        <li class="fonct.number flexBetween">
+                            <div class="icone"><i class="fas fa-mobile-alt"></i></div>
                             <span>Choisissez un restaurant</span>
                         </li>
-                        <li>
-                            <i class="fas fa-list"></i>
+                        <li class="fonct.number flexBetween">
+                            <div class="icone"><i class="fas fa-list"></i></div>
                             <span>Composer votre menu</span>
                         </li>
-                        <li>
-                            <i class="fas fa-store"></i>
+                        <li class="fonct.number flexBetween">
+                            <div class="icone"><i class="fas fa-list"></i></div>
                             <span>Déguster au restaurant</span>
                         </li>
                     </ol>
-                </div>
-            </section> 
-            <section Restaurants>
-                <div restaurants>
+                
+            </article> 
+            <article class="restau">
+                
                     <h3>Restaurants</h3>
-                        <div>
+                        <figure class="card">
                             <a href="restaurant/la-palette-du-gout.html">
                                 <img class ="restaurants__card__img" src="images/restaurants/La Palette du gout-1.png" alt="la-palette-du-gout">
                                 <span>Nouveau</span>
@@ -72,7 +72,10 @@
                                     <i class="fas fa-heart"></i>
                                 </div>
                             </a>
-                            <a href="/restaurant/la-note-enchantee.html">
+                        </figure>
+                            
+                        <figure class="card">
+                                 <a href="/restaurant/la-note-enchantee.html">
                                 <img src="images/restaurants/La note enchantée-1.png" alt="la-note-enchantee">
                                 <span>Nouveau</span>
                                 <div>
@@ -84,6 +87,8 @@
                                     <i class="fas fa-heart"></i>  
                                 </div>
                             </a>
+                        </figure>
+                        <figure class="card">    
                             <a href="/restaurant/a-la-francaise.html">
                                 <img src="images/restaurants/A la française-1.png" alt="a-la-francaise">
                                 <span>Nouveau</span>
@@ -96,6 +101,8 @@
                                     <i class="fas fa-heart"></i>  
                                 </div>
                             </a>
+                        </figure>
+                        <figure class="card">    
                             <a href="/restaurant/le-delice-des-sens.html">
                                 <img src="images/restaurants/Le délice des sens-1.png" alt="le-delice-des-sens">
                                 <span>Nouveau</span>
@@ -108,9 +115,9 @@
                                     <i class="fas fa-heart"></i>  
                                 </div>
                             </a>
-                        </div>
-                </div>
-            </section>
+                        </figure>
+                
+            </article>
         </main>
         <footer>
             <h1>ohmyfood</h1>
