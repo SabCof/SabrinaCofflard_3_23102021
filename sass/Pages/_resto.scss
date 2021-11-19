@@ -1,23 +1,2 @@
-@import "../Utils/variables";
-@import "../Base/typography", "../Base/reset";
 
-
-// HEADER
-.pResto{
-    padding: 20px 25px 10px 25px;
-    display: flex;
-    align-items: center;
-    &__logo{
-        margin: auto;
-    }
-    &__liens{
-        font-size: 20px;
-    }
-}
-
-.pr_img{
-    max-height: 250px;
-    width: 100%;
-    object-fit: cover;
-}
 

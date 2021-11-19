@@ -1,44 +1,89 @@
-.spinner {
-	margin: 100px auto 0;
-	width: 70px;
+@import "../Utils/variables", "../Utils/animations", "../Utils/mixins", "../Utils/loader.scss";
+@import "../Base/reset", "../Base/typography";
+@import "../misenpage/flexbox.scss";
+@import "../Components/btn", "../Components/badge_new", "../Components/heart";
+
+.mainheader{
+	position: relative;
+	width: 100%;
+	padding: 1rem 1rem 0.2rem 1rem;
+	border-bottom: 2px solid #d5d5d5;
 	text-align: center;
-  }
-  
-  .spinner > div {
-	width: 18px;
-	height: 18px;
-	background-color: #9356dc;
-  
-	border-radius: 100%;
-	display: inline-block;
-	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  }
-  
-  .spinner .bounce1 {
-	-webkit-animation-delay: -0.32s;
-	animation-delay: -0.32s;
-	background-color: #ff79da;
-  }
-  
-  .spinner .bounce2 {
-	-webkit-animation-delay: -0.16s;
-	animation-delay: -0.16s;
-	background-color: #99e2d0;
-  }
-  
-  @-webkit-keyframes sk-bouncedelay {
-	0%, 80%, 100% { -webkit-transform: scale(0) }
-	40% { -webkit-transform: scale(1.0) }
-  }
-  
-  @keyframes sk-bouncedelay {
-	0%, 80%, 100% { 
-	  -webkit-transform: scale(0);
-	  transform: scale(0);
-	} 40% { 
-	  -webkit-transform: scale(1.0);
-	  transform: scale(1.0);
+}
+.recherche {
+    height: 50px;
+	width: 100%;
+    font-size: 18px;
+    color: black;
+    font-weight: bolder;
+	background-color: rgb(167, 160, 160);
+	text-align: center;
+}
+.explore{
+	text-align: center;
+	background-color: rgb(235, 237, 239);
+	
+}
+ol {
+	display: list-item;
+	list-style-type: decimal;
+	list-style-position: outside;
+	font-size: 1rem;
+    
+    
+}
+li {
+			
+	box-sizing: border-box;
+    background-color: #F5EEF8;
+    height: 2rem;
+    padding:  1% 0 1% 1%;
+    border-radius: 20px;
+	margin: 1em;
+
+	::marker {
+		background-color: $secondary-color;
 	}
-  }
-  
+}
+
+.fonct{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-width: 100%;
+	
+	
+   
+	.number {
+
+		display: flex;
+		justify-content: flex-start;
+		border: 2px solid #f2f2f2;
+		padding: 1em;
+		margin-right: 20px;
+		margin-top: 5px;
+		}  
+}
+.icone {
+	
+    width: 50px;
+ 
+    
+	
+}
+.restau{
+	
+	.card{
+		margin: 10px 0;
+		width: 100%;
+		height: auto;
+		background-color: white;
+		padding: 1%;
+		border-radius: 20px;
+		box-shadow: 5px 5px 5px 1px #f2f2f2;	
+		&:hover {
+			cursor: pointer;
+			transform: scale(1.1);
+		}
+		
+	}
+}
