@@ -1,14 +1,44 @@
-* {
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
 
+html {
+    font-size: 62.5%;
 }
-a {
-    text-decoration:none;
+
+body {
+    box-sizing: border-box;
+    background: $bg-white;
 }
-img{
-    max-width: 100%;
-    height: auto;
-    padding: 0;
+
+main {
+    padding: 4em 0 0 0;
+}
+
+h2 {
+    color: $font-black;
+    font-size: 26px;
+}
+
+input {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    transition: all .5s ease-in-out;
+    width: .3em;
+}
+::-webkit-scrollbar-track {
+    background-color: $bg-grey;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient($primary, $secondary);
+    transition: all .5s ease-in-out;
 }
