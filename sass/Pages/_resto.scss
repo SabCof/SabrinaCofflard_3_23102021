@@ -1,5 +1,17 @@
+@import "../Utils/variables", "../Utils/animations", "../Utils/mixins", "../Utils/loader.scss";
+@import "../Base/reset", "../Base/typography";
+@import "../misenpage/flexbox.scss";
+@import "../Components/btn", "../Components/heart", "../Components/footer.scss";
+
+.mainheader{
+    position: relative;
+    width: 100%;
+    padding: 1rem 1rem 0.2rem 1rem;
+    border-bottom: 2px solid #d5d5d5;
+    text-align: center;
+}
 main {
-    .section__introduction {
+    .introduction {
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -7,20 +19,20 @@ main {
         height: 22em;
 
         &[data-background='1'] {
-            background-image: url(../../public/img/rest1.webp);
+            background-image: url(/images/restaurants/La\ Palette\ du\ gout-1.png);
         }
         &[data-background='2'] {
-            background-image: url(../../public/img/rest2.webp);
+            background-image: url(/images/restaurants/La\ note\ enchantée-1.png);
         }
         &[data-background='3'] {
-            background-image: url(../../public/img/rest3.webp);
+            background-image: url(/images/restaurants/A\ la\ française-1.png);
         }
         &[data-background='4'] {
-            background-image: url(../../public/img/rest4.webp);
+            background-image: url(/images/restaurants/Le\ délice\ des\ sens-1.png);
         }
     }
 
-    .section__menu {
+    .menu {
         background-color: $bg-grey;
         border-radius: 60px 60px 0 0;
         margin-top: -3em;
@@ -32,7 +44,7 @@ main {
 
             i {
                 bottom: .4em;
-                color: $font-black;
+                color: black;
                 cursor: pointer;
                 font-size: 35px;
                 position: absolute;
@@ -44,7 +56,7 @@ main {
                     color: $font-white;
                     font-weight: 600;
                     transform: scale(1.2);
-                    -webkit-background-clip: text;
+                    
                     -webkit-text-fill-color: transparent;
                 }
             }
@@ -164,7 +176,7 @@ main {
 
 @media screen and (max-width: $tablet) {
 
-    .section__menu {
+    .menu {
         &-container {
             flex-direction: column;
             padding: 2em 2em 0 2em !important;
@@ -188,7 +200,7 @@ main {
 
 @media screen and (max-width: $tablet) {
 
-    div .section__menu-container-cards-check {
+    div .menu-container-cards-check {
         margin: -1em -11em -1em 3.5em;
     }
     
@@ -196,7 +208,7 @@ main {
 
 @media screen and (max-width: $phone) {
 
-    .section__menu {
+    .menu {
         &-title {
             font-size: 1.4em;
 
@@ -211,7 +223,7 @@ main {
         }
     }
 
-    div .section__menu-container-cards-check {
+    div .menu-container-cards-check {
         margin: -1em -8em -1em 3.5em;
     }
 
