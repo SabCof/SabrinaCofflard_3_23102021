@@ -1,0 +1,65 @@
+.footer {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em 2em 2em 2em;
+   
+
+    &-link {
+    
+        background: linear-gradient(
+            to top,
+            $secondary 0%,
+            $secondary 10%,
+            transparent 10.01%
+        )
+        no-repeat center bottom / 0 100%;
+        color: $font-white;
+        height: 1.5em;
+        transition: all .3s ease-in-out;
+
+        i {
+            margin-right: .5em;
+            color: white;
+        }
+        &:hover {
+            background-size: 50% 100%;
+        }
+        &-logo {
+            font-family: 'Shrikhand', cursive;
+            font-weight: 900;
+            font-size: 3rem;
+            color: white;
+        }
+    }
+}
+
+// Responsive
+
+@media screen and (max-width: $tablet) {
+
+    .footer {
+        &-link {
+            &-logo {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $phone) {
+
+    .footer {
+        align-items: flex-start;
+        flex-direction: column;
+
+        &-link {
+            &-logo {
+                padding-bottom: 1em;
+            }
+        }
+    }
+}

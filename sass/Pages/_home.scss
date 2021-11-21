@@ -30,7 +30,7 @@
 	text-align: center;
 
 	&-subtitle {
-		font-weight: 400;
+		font-size: 1em;
 		padding: 1em 0 1.5em 0;
 	}
 }
@@ -139,13 +139,7 @@
 			position: absolute;
 			right: 1.5em;
 			top: 1em;
-		}
-
-		[data-value="true"] {
-			display: flex;
-		}
-		[data-value="false"] {
-			display: none;
+			font-size: 15px;
 		}
 
 		&-img {
@@ -170,7 +164,16 @@
 			transform: scale(1.02);
 		}
 	}
+	&-bloc1 {
+		block-size: auto;
+		align-items: baseline;
+	}
+	&-bloc2 {
+		align-items: center;
+		flex-direction:row;
+	}
 }
+
 @media screen and (max-width: $tablet) {
 
     .fonct {
