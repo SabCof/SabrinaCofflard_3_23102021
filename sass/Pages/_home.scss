@@ -1,6 +1,6 @@
 @import "../Utils/variables", "../Utils/animations", "../Utils/mixins", "../Utils/loader.scss";
 @import "../Base/reset", "../Base/typography";
-@import "../misenpage/flexbox.scss";
+
 @import "../Components/btn", "../Components/heart";
 
 	.mainheader{
@@ -175,9 +175,10 @@
 		}
 	}
 }
+// Responsive
 @media screen and (max-width: $tablet) {
 
-    .fonct {
+    .section__operation {
         flex-direction: column;
         justify-content: center;
 
@@ -185,11 +186,11 @@
             text-align: center;
         }
     }
-	
+    
 }
 
 @media screen and (max-width: $phone) {
-    .fonct {
+    .section__operation {
         &-cards {
             padding: 1.5em 0 !important;
 
@@ -199,7 +200,7 @@
         }
     }
 
-    .restau {
+    .section__restaurants {
         flex-direction: column;
 
         &-cards {
@@ -209,6 +210,5 @@
                 height: 10em !important;
             }
         }
-		
     }
 }

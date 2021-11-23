@@ -10,23 +10,23 @@
 }
 
 html {
-    font-size: 62%;
+    font-size: 62.5%;
 }
 
 body {
     box-sizing: border-box;
-    background: $bg-white;
+    background: white;
 }
 
-
+main {
+    padding: 4em 0 0 0;
+}
 
 h2 {
-    color: $font-black;
-    font-size: 26px;
+    color: black;
+    font-size: 30px;
 }
-p {
-    font-size: 15px;
-}
+
 input {
     display: none;
 }
@@ -36,9 +36,9 @@ input {
     width: .3em;
 }
 ::-webkit-scrollbar-track {
-    background-color: $bg-grey;
+    background-color: #EAEDED;
 }
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient($primary, $secondary);
+    background: linear-gradient(#9356DC, #FF79DA);
     transition: all .5s ease-in-out;
 }

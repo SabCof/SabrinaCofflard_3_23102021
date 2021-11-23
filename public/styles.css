@@ -1,18 +1,1053 @@
-/* Error: Undefined variable.
- *   ,
- * 3 |     color: $font-black;
- *   |            ^^^^^^^^^^^
- *   '
- *   sass\Base\_typography.scss 3:12  @import
- *   sass\styles.scss 1:9             root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 3 \2502      color: $font-black;\d\a   \2502             ^^^^^^^^^^^\a   \2575 \a   sass\\Base\\_typography.scss 3:12  @import\a   sass\\styles.scss 1:9             root stylesheet";
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-size: 2rem;
+  font-weight: 400;
+  list-style: none;
 }
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 900;
+  font-size: 5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background: white;
+}
+
+main {
+  padding: 4em 0 0 0;
+}
+
+h2 {
+  color: black;
+  font-size: 30px;
+}
+
+input {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  transition: all 0.5s ease-in-out;
+  width: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #EAEDED;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#9356DC, #FF79DA);
+  transition: all 0.5s ease-in-out;
+}
+
+.btn {
+  background-image: linear-gradient(174deg, #FF79DA 20%, #9356DC 80%);
+  border: 0 solid transparent;
+  border-radius: 30px;
+  box-shadow: 0px 0px 12px #e7e5df;
+  color: white;
+  font-weight: 500;
+  margin: 0 auto;
+  padding: 1em 1.5em;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  box-shadow: 5px 5px 12px #e7e5df;
+  transform: translateY(-0.2em);
+}
+
+.heart {
+  font-size: 20px;
+  color: grey;
+}
+.heart:hover {
+  animation: fill 1.5s ease-out;
+  background: linear-gradient(#FF79DA, #9356DC);
+  font-weight: bold;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes checked {
+  0% {
+    transform: rotateZ(100deg);
+  }
+  50% {
+    transform: rotateZ(-50deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes loader {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9999;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes rotate-grad {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-45deg);
+  }
+}
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #9356dc;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+  background-color: #ff79da;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+  background-color: #99e2d0;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/* html 
+  <div class="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>*/
+.footer {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2em 2em 2em 2em;
+}
+.footer-link {
+  background: linear-gradient(to top, #FF79DA 0%, #FF79DA 10%, transparent 10.01%) no-repeat center bottom/0 100%;
+  color: white;
+  height: 1.5em;
+  transition: all 0.3s ease-in-out;
+}
+.footer-link i {
+  margin-right: 0.5em;
+  color: white;
+}
+.footer-link:hover {
+  background-size: 50% 100%;
+}
+.footer-link-logo {
+  font-family: "Shrikhand", cursive;
+  font-weight: 900;
+  font-size: 3rem;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-link-logo {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .footer-link-logo {
+    padding-bottom: 1em;
+  }
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background: white;
+}
+
+main {
+  padding: 4em 0 0 0;
+}
+
+h2 {
+  color: black;
+  font-size: 30px;
+}
+
+input {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  transition: all 0.5s ease-in-out;
+  width: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #EAEDED;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#9356DC, #FF79DA);
+  transition: all 0.5s ease-in-out;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-size: 2rem;
+  font-weight: 400;
+  list-style: none;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 900;
+  font-size: 5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-image: linear-gradient(174deg, #FF79DA 20%, #9356DC 80%);
+  border: 0 solid transparent;
+  border-radius: 30px;
+  box-shadow: 0px 0px 12px #e7e5df;
+  color: white;
+  font-weight: 500;
+  margin: 0 auto;
+  padding: 1em 1.5em;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  box-shadow: 5px 5px 12px #e7e5df;
+  transform: translateY(-0.2em);
+}
+
+.heart {
+  font-size: 20px;
+  color: grey;
+}
+.heart:hover {
+  animation: fill 1.5s ease-out;
+  background: linear-gradient(#FF79DA, #9356DC);
+  font-weight: bold;
+}
+
+.mainheader {
+  position: relative;
+  width: 100%;
+  padding: 1rem 1rem 0.2rem 1rem;
+  border-bottom: 2px solid #d5d5d5;
+  text-align: center;
+}
+.mainheader i {
+  color: black;
+  left: 2em;
+  position: absolute;
+  top: 1.5em;
+  transition: all 0.2s ease-in-out;
+}
+.mainheader i::after {
+  color: #9356DC;
+  content: "Accueil";
+  font-family: "Roboto";
+  left: 1.5em;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+.mainheader i:hover {
+  color: #9356DC;
+  transform: scale(1.1);
+}
+.mainheader i:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+main .introduction {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 22em;
+}
+main .introduction[data-background="1"] {
+  background-image: url(/images/restaurants/La\ Palette\ du\ gout-1.png);
+}
+main .introduction[data-background="2"] {
+  background-image: url(/images/restaurants/La\ note\ enchantée-1.png);
+}
+main .introduction[data-background="3"] {
+  background-image: url(/images/restaurants/A\ la\ française-1.png);
+}
+main .introduction[data-background="4"] {
+  background-image: url(/images/restaurants/Le\ délice\ des\ sens-1.png);
+}
+main .menu {
+  background-color: #EAEDED;
+  border-radius: 60px 60px 0 0;
+  margin-top: -3em;
+}
+main .menu-title {
+  padding: 1em 0 0 1em;
+  position: relative;
+  width: 100%;
+}
+main .menu-title i {
+  bottom: 0.4em;
+  color: black;
+  cursor: pointer;
+  font-size: 35px;
+  position: absolute;
+  right: 2em;
+  transition: all 0.2s ease-in-out;
+}
+main .menu-title i:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: white;
+  font-weight: 600;
+  transform: scale(1.2);
+  -webkit-text-fill-color: transparent;
+}
+main .menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2em 0 2em 0;
+}
+main .menu-container-title {
+  font-weight: 400;
+  padding: 0 0 1em 1.8em;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+}
+main .menu-container-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 2.5em;
+  left: 1.85em;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #99E2D0;
+}
+main .menu-container-cards {
+  animation: show 0.5s ease-in-out;
+  animation-fill-mode: backwards;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px #e7e5df;
+  cursor: pointer;
+  display: flex;
+  max-width: 28%;
+  overflow: hidden;
+  padding: 1em 1em;
+  width: 100%;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+main .menu-container-cards:nth-child(3) {
+  animation-delay: 0.4s;
+}
+main .menu-container-cards:nth-child(4) {
+  animation-delay: 0.6s;
+}
+main .menu-container-cards:nth-child(5) {
+  animation-delay: 0.8s;
+}
+main .menu-container-cards-info {
+  max-width: 100%;
+  width: 100%;
+}
+main .menu-container-cards-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+main .menu-container-cards-subtitle {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+main .menu-container-cards-price {
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
+main .menu-container-cards-check {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #99e2d0;
+  width: 30%;
+  transition: all 0.4s ease-in-out;
+  margin: -1em -8em -1em 2.5em;
+}
+main .menu-container-cards-check i {
+  color: white;
+  font-size: 30px;
+  transition: all 0.4s 0.2s ease-in-out;
+}
+main .menu-container-cards input:checked ~ .section__menu-container-cards-check {
+  margin: -1em -1em -1em 0.5em;
+}
+main .menu-container-cards input:checked ~ .section__menu-container-cards-check i {
+  animation: checked 1s 1 ease-in-out;
+}
+main .menu-container-cards:hover {
+  transform: scale(1.02);
+}
+main .menu-buy {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 2em 0;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+    padding: 2em 2em 0 2em !important;
+  }
+  .menu-container-title {
+    padding: 0 0 1em 0 !important;
+  }
+  .menu-container-title::before {
+    left: 0 !important;
+  }
+  .menu-container-cards {
+    margin: 0 0 2em 0;
+    max-width: 100% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  div .menu-container-cards-check {
+    margin: -1em -11em -1em 3.5em;
+  }
+}
+@media screen and (max-width: 640px) {
+  .menu-title {
+    font-size: 1.4em;
+  }
+  .menu-title i {
+    bottom: 0.1em !important;
+    right: 1em !important;
+  }
+  .menu-container {
+    flex-direction: column;
+    padding: 2em 1em 0 1em !important;
+  }
+
+  div .menu-container-cards-check {
+    margin: -1em -8em -1em 3.5em;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes checked {
+  0% {
+    transform: rotateZ(100deg);
+  }
+  50% {
+    transform: rotateZ(-50deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes loader {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9999;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes rotate-grad {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-45deg);
+  }
+}
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #9356dc;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+  background-color: #ff79da;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+  background-color: #99e2d0;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/* html 
+  <div class="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background: white;
+}
+
+main {
+  padding: 4em 0 0 0;
+}
+
+h2 {
+  color: black;
+  font-size: 30px;
+}
+
+input {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  transition: all 0.5s ease-in-out;
+  width: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #EAEDED;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#9356DC, #FF79DA);
+  transition: all 0.5s ease-in-out;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-size: 2rem;
+  font-weight: 400;
+  list-style: none;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 900;
+  font-size: 5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-image: linear-gradient(174deg, #FF79DA 20%, #9356DC 80%);
+  border: 0 solid transparent;
+  border-radius: 30px;
+  box-shadow: 0px 0px 12px #e7e5df;
+  color: white;
+  font-weight: 500;
+  margin: 0 auto;
+  padding: 1em 1.5em;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  box-shadow: 5px 5px 12px #e7e5df;
+  transform: translateY(-0.2em);
+}
+
+.heart {
+  font-size: 20px;
+  color: grey;
+}
+.heart:hover {
+  animation: fill 1.5s ease-out;
+  background: linear-gradient(#FF79DA, #9356DC);
+  font-weight: bold;
+}
+
+.mainheader {
+  position: relative;
+  width: 100%;
+  padding: 1rem 1rem 0.2rem 1rem;
+  border-bottom: 2px solid #d5d5d5;
+  text-align: center;
+}
+
+main .recherche {
+  align-items: center;
+  background-color: #D5DBDB;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+main .recherche-input {
+  margin-left: 0.5em;
+}
+main .explore {
+  background-color: #EAEDED;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5em 0;
+  text-align: center;
+}
+main .explore-subtitle {
+  font-size: 1em;
+  padding: 1em 0 1.5em 0;
+}
+main .fonct {
+  counter-reset: ope;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1em 1em 0 1em;
+}
+main .fonct-title {
+  width: 100%;
+}
+main .fonct-cards {
+  align-items: center;
+  background-color: #e7e5df;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px #e7e5df;
+  cursor: pointer;
+  display: flex;
+  font-size: 15px;
+  margin: 1em 0 0 0;
+  padding: 2em 2em;
+  transition: all 0.2s ease-in-out;
+}
+main .fonct-cards::before {
+  align-items: center;
+  background-color: #9356DC;
+  border-radius: 20px;
+  color: white;
+  counter-increment: ope;
+  content: counter(ope);
+  display: flex;
+  height: 1.5em;
+  justify-content: center;
+  padding: 0.3em;
+  position: relative;
+  right: 5.7em;
+  width: 1.5em;
+}
+main .fonct-cards i {
+  margin-right: 1em;
+  padding-right: 1em;
+}
+main .fonct-cards-title {
+  color: #000;
+}
+main .fonct-cards:hover {
+  background-color: #ff79da21;
+  transform: scale(1.02);
+}
+main .restau {
+  background-color: #EAEDED;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2em 0 0 0;
+  padding: 2em 0.5em 0 0.5em;
+}
+main .restau-title {
+  width: 100%;
+}
+main .restau-cards {
+  border-radius: 15px;
+  box-shadow: 0 5px 15px #e7e5df;
+  overflow: hidden;
+  margin: 1em 0;
+  max-width: 45%;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+main .restau-cards i {
+  bottom: 1em;
+  color: black;
+  cursor: pointer;
+  font-size: 25px;
+  position: absolute;
+  right: 1em;
+  transition: all 0.2s ease-in-out;
+}
+main .restau-cards i:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: white;
+  font-weight: 600;
+  transform: scale(1.2);
+  -webkit-text-fill-color: transparent;
+}
+main .restau-cards-new {
+  background-color: #99E2D0;
+  border-radius: 5px;
+  color: #0cd6a4;
+  padding: 0.5em;
+  position: absolute;
+  right: 1.5em;
+  top: 1em;
+  font-size: 15px;
+}
+main .restau-cards-img {
+  width: 100%;
+  height: 15em;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+main .restau-cards-title {
+  color: black;
+  margin: 0.5em 0 0 1em;
+}
+main .restau-cards-desc {
+  color: black;
+  margin: 0 0 0.5em 1.2em;
+}
+main .restau-cards:hover {
+  transform: scale(1.02);
+}
+main .restau-bloc1 {
+  block-size: auto;
+  align-items: baseline;
+}
+main .restau-bloc2 {
+  align-items: center;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .section__operation {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section__operation-cards {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .section__operation-cards {
+    padding: 1.5em 0 !important;
+  }
+  .section__operation-cards::before {
+    right: 0.7em !important;
+  }
+
+  .section__restaurants {
+    flex-direction: column;
+  }
+  .section__restaurants-cards {
+    max-width: 100% !important;
+  }
+  .section__restaurants-cards-img {
+    height: 10em !important;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes checked {
+  0% {
+    transform: rotateZ(100deg);
+  }
+  50% {
+    transform: rotateZ(-50deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes loader {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9999;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes rotate-grad {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-45deg);
+  }
+}
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #9356dc;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+  background-color: #ff79da;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+  background-color: #99e2d0;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/* html 
+  <div class="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>*/
+.footer {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2em 2em 2em 2em;
+}
+.footer-link {
+  background: linear-gradient(to top, #FF79DA 0%, #FF79DA 10%, transparent 10.01%) no-repeat center bottom/0 100%;
+  color: white;
+  height: 1.5em;
+  transition: all 0.3s ease-in-out;
+}
+.footer-link i {
+  margin-right: 0.5em;
+  color: white;
+}
+.footer-link:hover {
+  background-size: 50% 100%;
+}
+.footer-link-logo {
+  font-family: "Shrikhand", cursive;
+  font-weight: 900;
+  font-size: 3rem;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-link-logo {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .footer-link-logo {
+    padding-bottom: 1em;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

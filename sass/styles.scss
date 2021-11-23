@@ -1,8 +1,8 @@
 @import "./Base/typography", "./Base/reset";
-@import "./Components/btn", "./Components/heart","./Components/footer.scss";
-@import "./misenpage/flexbox.scss";
+@import "./Components/btn", "./Components/heart";
+
 @import "./Pages/resto", "./Pages/home";
-@import "./Utils/animations", "./Utils/mixins", "./Utils/variables", "./Utils/loader.scss"; 
+@import "./Utils/animations", "./Utils/mixins","./Utils/variables", "./Utils/loader.scss","./Utils/footer.scss" ; 
 
 
 

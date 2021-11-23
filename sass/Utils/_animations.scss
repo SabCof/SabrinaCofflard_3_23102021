@@ -1,0 +1,50 @@
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes checked {
+    0% {
+        transform: rotateZ(100deg);
+    }
+    50% {
+        transform: rotateZ(-50deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes loader {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        z-index: 9999;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes rotate-grad {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+      -webkit-filter: hue-rotate(-45deg);
+    }
+  }

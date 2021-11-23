@@ -11,12 +11,12 @@
     
         background: linear-gradient(
             to top,
-            $secondary 0%,
-            $secondary 10%,
+            #FF79DA 0%,
+            #FF79DA 10%,
             transparent 10.01%
         )
         no-repeat center bottom / 0 100%;
-        color: $font-white;
+        color: white;
         height: 1.5em;
         transition: all .3s ease-in-out;
 
@@ -38,7 +38,7 @@
 
 // Responsive
 
-@media screen and (max-width: $tablet) {
+@media screen and (max-width: 768px) {
 
     .footer {
         &-link {
@@ -50,7 +50,7 @@
     }
 }
 
-@media screen and (max-width: $phone) {
+@media screen and (max-width: 640px) {
 
     .footer {
         align-items: flex-start;
