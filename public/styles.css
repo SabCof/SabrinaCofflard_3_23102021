@@ -31,6 +31,13 @@ a {
   box-sizing: inherit;
   scroll-behavior: smooth;
 }
+* i,
+*::after i,
+*::before i {
+  content: "\f004";
+  font-weight: bold;
+  transition: color 2s ease-out;
+}
 
 html {
   font-size: 62.5%;
@@ -39,10 +46,6 @@ html {
 body {
   box-sizing: border-box;
   background: white;
-}
-
-main {
-  padding: 4em 0 0 0;
 }
 
 h2 {
@@ -72,7 +75,7 @@ input {
   background-image: linear-gradient(174deg, #FF79DA 20%, #9356DC 80%);
   border: 0 solid transparent;
   border-radius: 30px;
-  box-shadow: 0px 0px 12px #e7e5df;
+  box-shadow: 0px 0px 12px #636261;
   color: white;
   font-weight: 500;
   margin: 0 auto;
@@ -82,16 +85,6 @@ input {
 .btn:hover {
   box-shadow: 5px 5px 12px #e7e5df;
   transform: translateY(-0.2em);
-}
-
-.heart {
-  font-size: 20px;
-  color: grey;
-}
-.heart:hover {
-  animation: fill 1.5s ease-out;
-  background: linear-gradient(#FF79DA, #9356DC);
-  font-weight: bold;
 }
 
 @keyframes show {
@@ -199,7 +192,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 2em 2em 2em 2em;
+  padding: 2em 2em 2em 1em;
 }
 .footer-link {
   background: linear-gradient(to top, #FF79DA 0%, #FF79DA 10%, transparent 10.01%) no-repeat center bottom/0 100%;
@@ -244,6 +237,13 @@ input {
   box-sizing: inherit;
   scroll-behavior: smooth;
 }
+* i,
+*::after i,
+*::before i {
+  content: "\f004";
+  font-weight: bold;
+  transition: color 2s ease-out;
+}
 
 html {
   font-size: 62.5%;
@@ -252,10 +252,6 @@ html {
 body {
   box-sizing: border-box;
   background: white;
-}
-
-main {
-  padding: 4em 0 0 0;
 }
 
 h2 {
@@ -303,7 +299,7 @@ a {
   background-image: linear-gradient(174deg, #FF79DA 20%, #9356DC 80%);
   border: 0 solid transparent;
   border-radius: 30px;
-  box-shadow: 0px 0px 12px #e7e5df;
+  box-shadow: 0px 0px 12px #636261;
   color: white;
   font-weight: 500;
   margin: 0 auto;
@@ -313,16 +309,6 @@ a {
 .btn:hover {
   box-shadow: 5px 5px 12px #e7e5df;
   transform: translateY(-0.2em);
-}
-
-.heart {
-  font-size: 20px;
-  color: grey;
-}
-.heart:hover {
-  animation: fill 1.5s ease-out;
-  background: linear-gradient(#FF79DA, #9356DC);
-  font-weight: bold;
 }
 
 .mainheader {
@@ -396,10 +382,9 @@ main .menu-title i {
   right: 2em;
   transition: all 0.2s ease-in-out;
 }
-main .menu-title i:hover {
+main .menu-title i:checked {
   background: linear-gradient(#9356DC, #FF79DA);
-  color: white;
-  font-weight: 600;
+  font-weight: bold;
   transform: scale(1.2);
   -webkit-text-fill-color: transparent;
 }
@@ -431,7 +416,7 @@ main .menu-container-cards {
   animation-fill-mode: backwards;
   background-color: white;
   border-radius: 25px;
-  box-shadow: 0 5px 15px #e7e5df;
+  box-shadow: 0 5px 15px #adaca7;
   cursor: pointer;
   display: flex;
   max-width: 28%;
@@ -647,6 +632,13 @@ main .menu-buy {
   box-sizing: inherit;
   scroll-behavior: smooth;
 }
+* i,
+*::after i,
+*::before i {
+  content: "\f004";
+  font-weight: bold;
+  transition: color 2s ease-out;
+}
 
 html {
   font-size: 62.5%;
@@ -655,10 +647,6 @@ html {
 body {
   box-sizing: border-box;
   background: white;
-}
-
-main {
-  padding: 4em 0 0 0;
 }
 
 h2 {
@@ -706,7 +694,7 @@ a {
   background-image: linear-gradient(174deg, #FF79DA 20%, #9356DC 80%);
   border: 0 solid transparent;
   border-radius: 30px;
-  box-shadow: 0px 0px 12px #e7e5df;
+  box-shadow: 0px 0px 12px #636261;
   color: white;
   font-weight: 500;
   margin: 0 auto;
@@ -716,16 +704,6 @@ a {
 .btn:hover {
   box-shadow: 5px 5px 12px #e7e5df;
   transform: translateY(-0.2em);
-}
-
-.heart {
-  font-size: 20px;
-  color: grey;
-}
-.heart:hover {
-  animation: fill 1.5s ease-out;
-  background: linear-gradient(#FF79DA, #9356DC);
-  font-weight: bold;
 }
 
 .mainheader {
@@ -772,12 +750,12 @@ main .fonct-cards {
   align-items: center;
   background-color: #e7e5df;
   border-radius: 20px;
-  box-shadow: 0 5px 15px #e7e5df;
+  box-shadow: 0 5px 15px #adaca7;
   cursor: pointer;
   display: flex;
   font-size: 15px;
   margin: 1em 0 0 0;
-  padding: 2em 2em;
+  padding: 2em 1em;
   transition: all 0.2s ease-in-out;
 }
 main .fonct-cards::before {
@@ -792,7 +770,7 @@ main .fonct-cards::before {
   justify-content: center;
   padding: 0.3em;
   position: relative;
-  right: 5.7em;
+  right: 1.7em;
   width: 1.5em;
 }
 main .fonct-cards i {
@@ -806,11 +784,13 @@ main .fonct-cards:hover {
   background-color: #ff79da21;
   transform: scale(1.02);
 }
+main .fonct-cards:hover i {
+  color: #9356DC;
+}
 main .restau {
   background-color: #EAEDED;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 2em 0 0 0;
   padding: 2em 0.5em 0 0.5em;
 }
@@ -819,10 +799,9 @@ main .restau-title {
 }
 main .restau-cards {
   border-radius: 15px;
-  box-shadow: 0 5px 15px #e7e5df;
-  overflow: hidden;
-  margin: 1em 0;
-  max-width: 45%;
+  box-shadow: 0 5px 15px #adaca7;
+  overflow: auto;
+  margin: 2em 0.5em;
   position: relative;
   transition: all 0.2s ease-in-out;
   width: 100%;
@@ -834,14 +813,16 @@ main .restau-cards i {
   font-size: 25px;
   position: absolute;
   right: 1em;
-  transition: all 0.2s ease-in-out;
 }
-main .restau-cards i:hover {
-  background: linear-gradient(#9356DC, #FF79DA);
-  color: white;
-  font-weight: 600;
-  transform: scale(1.2);
-  -webkit-text-fill-color: transparent;
+main .restau-cards .fas {
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+main .restau-cards:hover .fas {
+  opacity: 1;
 }
 main .restau-cards-new {
   background-color: #99E2D0;
@@ -863,21 +844,15 @@ main .restau-cards-img {
 main .restau-cards-title {
   color: black;
   margin: 0.5em 0 0 1em;
+  text-decoration: none;
 }
 main .restau-cards-desc {
   color: black;
   margin: 0 0 0.5em 1.2em;
+  text-decoration: none;
 }
 main .restau-cards:hover {
   transform: scale(1.02);
-}
-main .restau-bloc1 {
-  block-size: auto;
-  align-items: baseline;
-}
-main .restau-bloc2 {
-  align-items: center;
-  flex-direction: row;
 }
 
 @media screen and (max-width: 768px) {
@@ -1012,7 +987,7 @@ main .restau-bloc2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 2em 2em 2em 2em;
+  padding: 2em 2em 2em 1em;
 }
 .footer-link {
   background: linear-gradient(to top, #FF79DA 0%, #FF79DA 10%, transparent 10.01%) no-repeat center bottom/0 100%;

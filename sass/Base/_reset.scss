@@ -7,6 +7,11 @@
     padding: 0;
     box-sizing: inherit;
     scroll-behavior: smooth;
+    i {
+        content: "\f004";
+        font-weight: bold;
+        transition: color 2s ease-out;
+    }
 }
 
 html {
@@ -18,9 +23,7 @@ body {
     background: white;
 }
 
-main {
-    padding: 4em 0 0 0;
-}
+
 
 h2 {
     color: black;
