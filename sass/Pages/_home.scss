@@ -10,7 +10,7 @@
 		border-bottom: 2px solid #d5d5d5;
 		text-align: center;
 	}
-	main {
+main {
 	.recherche {
 		align-items: center;
 		background-color: $bg-grey-dark;
@@ -120,7 +120,7 @@
 			
 			i {
 				bottom: 1em;
-				color: black;
+				
 				cursor: pointer;
 				font-size: 25px;
 				position: absolute;
@@ -180,7 +180,7 @@
 // Responsive
 @media screen and (max-width: $tablet) {
 
-    .section__operation {
+    .operation {
         flex-direction: column;
         justify-content: center;
 
@@ -192,7 +192,7 @@
 }
 
 @media screen and (max-width: $phone) {
-    .section__operation {
+    .operation {
         &-cards {
             padding: 1.5em 0 !important;
 
@@ -202,7 +202,7 @@
         }
     }
 
-    .section__restaurants {
+    .restau {
         flex-direction: column;
 
         &-cards {
