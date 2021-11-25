@@ -11,6 +11,7 @@
 		text-align: center;
 	}
 main {
+	
 	.recherche {
 		align-items: center;
 		background-color: $bg-grey-dark;
@@ -40,22 +41,31 @@ main {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		padding: 1em 1em 0 1em;
+		padding: 1em 1em 0 1em;	
 
 		&-title {
 			width: 100%;
+			
+		}
+		& ol {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+			
 		}
 		&-cards {
-			align-items: center;
+			display: flex;
+			position: relative;
 			
+			flex-grow: 1;
 			background-color: $shadow-color;
 			border-radius: 20px;
 			box-shadow: 0 5px 15px $shadow;
 			cursor: pointer;
-			display: flex;
-			font-size: 15px;
 			margin: 1em 0 0 0;
-			padding: 2em 1em;
+			padding: 1.5rem 2rem;
+			
+			
 			transition: all .2s ease-in-out;
 
 			
@@ -74,13 +84,15 @@ main {
 				position: relative;
 				right: 1.7em;
 				width: 1.5em;
+				
+				
 			}
-
 			i {
-				margin-right: 1em;
+				
 				padding-right: 1em;
 				
 			}
+			
 
 			&-title {
 				color: #000;
@@ -98,25 +110,32 @@ main {
 	.restau{
 		
 		background-color: $bg-grey;
-		display: flex;
-		flex-wrap: wrap;
+		
 		
 		margin: 2em 0 0 0;
 		padding: 2em 0.5em 0 0.5em;
-
 		&-title {
 			width: 100%;
 		}
-
+		
+		.card {
+			display: grid;
+			grid-template-columns: repeat(2,1fr) ;
+			gap: 2rem;
+			@media  (max-width:767px) {
+				grid-template-columns: repeat(1, 1fr);
+			}
+			
+		}
 		&-cards {
 			border-radius: 15px;
 			box-shadow: 0 5px 15px $shadow;
 			overflow: auto;
 			margin: 2em 0.5em;
-			
 			position: relative;
+			
 			transition: all .2s ease-in-out;
-			width: 100%;
+			
 			
 			i {
 				bottom: 1em;
@@ -180,7 +199,7 @@ main {
 // Responsive
 @media screen and (max-width: $tablet) {
 
-    .operation {
+    .fonct {
         flex-direction: column;
         justify-content: center;
 
@@ -192,7 +211,7 @@ main {
 }
 
 @media screen and (max-width: $phone) {
-    .operation {
+    .fonct {
         &-cards {
             padding: 1.5em 0 !important;
 
@@ -214,3 +233,13 @@ main {
         }
     }
 }
+@media screen and (min-width: 1025px) and (max-width: 1440px ){
+	.fonct {
+		flex-direction: row;
+		align-items: center;
+	}
+	.restau {
+		grid-template-columns:repeat(4,1fr)
+	}
+}
+	
