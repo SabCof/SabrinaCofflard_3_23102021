@@ -14,7 +14,9 @@
     </head>
     <body> 
         <!--loader-->
-       
+        <div class="spinner">
+            
+          </div>
           
           <!--header-->
         <header class="mainheader">
@@ -154,5 +156,10 @@
                     </a>
              
         </footer>
+        <script>
+            $( document ).ready(function(){
+               $('.loader').hide();/*je cache le loader après le chargement de la page*/
+            });
+             </script>
     </body>
 </html>

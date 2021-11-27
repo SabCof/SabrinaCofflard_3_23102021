@@ -6,7 +6,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 body {
-  max-width: 1440px;
   font-family: "Roboto", sans-serif;
   color: black;
   font-size: 1.5rem;
@@ -46,7 +45,6 @@ html {
 }
 
 body {
-  max-width: 1440px;
   box-sizing: border-box;
   width: 100%;
   background: white;
@@ -76,6 +74,7 @@ input {
 }
 
 .btn {
+  align-items: center;
   background-image: linear-gradient(174deg, #FF79DA 20%, #9356DC 80%);
   border: 0 solid transparent;
   border-radius: 30px;
@@ -115,21 +114,6 @@ input {
     transform: rotateZ(0deg);
   }
 }
-@keyframes loader {
-  0% {
-    visibility: visible;
-    opacity: 1;
-    z-index: 9999;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1;
-  }
-}
 @keyframes rotate-grad {
   from {
     -webkit-filter: hue-rotate(0deg);
@@ -139,57 +123,38 @@ input {
   }
 }
 .spinner {
-  margin: 100px auto 0;
-  width: 70px;
-  text-align: center;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: whitesmoke;
+  opacity: 0.9;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: disappear 200ms 4s forwards;
+  transform-origin: top;
+}
+.spinner::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid #9356DC;
+  border-top: 5px solid #FF79DA;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out;
+  animation-iteration-count: 2;
 }
 
-.spinner > div {
-  width: 18px;
-  height: 18px;
-  background-color: #9356dc;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-}
-
-.spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-  background-color: #ff79da;
-}
-
-.spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-  background-color: #99e2d0;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0);
-  }
-  40% {
-    -webkit-transform: scale(1);
-  }
-}
-@keyframes sk-bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0);
+@keyframes disappear {
+  to {
     transform: scale(0);
   }
-  40% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
-/* html 
-  <div class="spinner">
-  <div class="bounce1"></div>
-  <div class="bounce2"></div>
-  <div class="bounce3"></div>
-</div>*/
 .footer {
   align-items: center;
   background-color: black;
@@ -254,7 +219,6 @@ html {
 }
 
 body {
-  max-width: 1440px;
   box-sizing: border-box;
   width: 100%;
   background: white;
@@ -284,7 +248,6 @@ input {
 }
 
 body {
-  max-width: 1440px;
   font-family: "Roboto", sans-serif;
   color: black;
   font-size: 1.5rem;
@@ -304,6 +267,7 @@ a {
 }
 
 .btn {
+  align-items: center;
   background-image: linear-gradient(174deg, #FF79DA 20%, #9356DC 80%);
   border: 0 solid transparent;
   border-radius: 30px;
@@ -372,6 +336,8 @@ main .introduction[data-background="4"] {
   background-image: url(/images/restaurants/Le\ délice\ des\ sens-1.png);
 }
 main .menu {
+  display: flex;
+  flex-direction: column;
   background-color: #EAEDED;
   border-radius: 60px 60px 0 0;
   margin-top: -3em;
@@ -424,19 +390,20 @@ main .menu-container-title::before {
   background-color: #99E2D0;
 }
 main .menu-container-cards {
-  animation: show 0.5s ease-in-out;
-  animation-fill-mode: backwards;
+  margin: 0 1rem 1rem 0;
   background-color: white;
+  height: 6rem;
+  width: 100%;
   border-radius: 25px;
   box-shadow: 0 5px 15px #adaca7;
-  cursor: pointer;
-  display: flex;
-  max-width: 28%;
+  position: relative;
   overflow: hidden;
   padding: 1em 1em;
-  width: 100%;
-  position: relative;
+  animation: show 0.5s ease-in-out;
+  animation-fill-mode: backwards;
   transition: all 0.2s ease-in-out;
+  max-width: 28%;
+  cursor: pointer;
 }
 main .menu-container-cards:nth-child(3) {
   animation-delay: 0.4s;
@@ -459,6 +426,7 @@ main .menu-container-cards-title {
   -webkit-box-orient: vertical;
 }
 main .menu-container-cards-subtitle {
+  display: flex;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -466,20 +434,30 @@ main .menu-container-cards-subtitle {
   -webkit-box-orient: vertical;
 }
 main .menu-container-cards-price {
-  align-items: flex-end;
-  display: flex;
-  justify-content: flex-end;
+  bottom: 2rem;
+  position: absolute;
+  right: 5%;
 }
 main .menu-container-cards-check {
-  align-items: center;
+  right: -30%;
+  bottom: 0rem;
   display: flex;
+  align-items: center;
+  position: absolute;
   justify-content: center;
   background-color: #99e2d0;
-  width: 30%;
-  transition: all 0.4s ease-in-out;
-  margin: -1em -8em -1em 2.5em;
+  width: 25%;
+  height: 6rem;
+  border-radius: 25px;
+  margin-right: 5%;
 }
-main .menu-container-cards-check i {
+main .menu-container-cards:hover.section__menu-container-cards-check {
+  margin-right: -25%;
+}
+main .menu-container-cards:hover.section__menu-container-cards-check i {
+  justify-content: center;
+  display: flex;
+  align-items: center;
   color: white;
   font-size: 30px;
   transition: all 0.4s 0.2s ease-in-out;
@@ -498,6 +476,10 @@ main .menu-buy {
   justify-content: center;
   padding: 0 0 2em 0;
 }
+main .menu .btn {
+  justify-items: center;
+  padding: 1rem 2rem;
+}
 
 @media screen and (max-width: 1024px) {
   .menu-container {
@@ -513,28 +495,6 @@ main .menu-buy {
   .menu-container-cards {
     margin: 0 0 2em 0;
     max-width: 100% !important;
-  }
-}
-@media screen and (max-width: 1024px) {
-  div .menu-container-cards-check {
-    margin: -1em -11em -1em 3.5em;
-  }
-}
-@media screen and (max-width: 769px) {
-  .menu-title {
-    font-size: 1.4em;
-  }
-  .menu-title i {
-    bottom: 0.1em !important;
-    right: 1em !important;
-  }
-  .menu-container {
-    flex-direction: column;
-    padding: 2em 1em 0 1em !important;
-  }
-
-  div .menu-container-cards-check {
-    margin: -1em -8em -1em 3.5em;
   }
 }
 @keyframes show {
@@ -561,21 +521,6 @@ main .menu-buy {
     transform: rotateZ(0deg);
   }
 }
-@keyframes loader {
-  0% {
-    visibility: visible;
-    opacity: 1;
-    z-index: 9999;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1;
-  }
-}
 @keyframes rotate-grad {
   from {
     -webkit-filter: hue-rotate(0deg);
@@ -585,57 +530,38 @@ main .menu-buy {
   }
 }
 .spinner {
-  margin: 100px auto 0;
-  width: 70px;
-  text-align: center;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: whitesmoke;
+  opacity: 0.9;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: disappear 200ms 4s forwards;
+  transform-origin: top;
+}
+.spinner::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid #9356DC;
+  border-top: 5px solid #FF79DA;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out;
+  animation-iteration-count: 2;
 }
 
-.spinner > div {
-  width: 18px;
-  height: 18px;
-  background-color: #9356dc;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-}
-
-.spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-  background-color: #ff79da;
-}
-
-.spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-  background-color: #99e2d0;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0);
-  }
-  40% {
-    -webkit-transform: scale(1);
-  }
-}
-@keyframes sk-bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0);
+@keyframes disappear {
+  to {
     transform: scale(0);
   }
-  40% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
-/* html 
-  <div class="spinner">
-  <div class="bounce1"></div>
-  <div class="bounce2"></div>
-  <div class="bounce3"></div>
-</div>*/
 *,
 *::after,
 *::before {
@@ -657,7 +583,6 @@ html {
 }
 
 body {
-  max-width: 1440px;
   box-sizing: border-box;
   width: 100%;
   background: white;
@@ -687,7 +612,6 @@ input {
 }
 
 body {
-  max-width: 1440px;
   font-family: "Roboto", sans-serif;
   color: black;
   font-size: 1.5rem;
@@ -707,6 +631,7 @@ a {
 }
 
 .btn {
+  align-items: center;
   background-image: linear-gradient(174deg, #FF79DA 20%, #9356DC 80%);
   border: 0 solid transparent;
   border-radius: 30px;
@@ -722,6 +647,39 @@ a {
   transform: translateY(-0.2em);
 }
 
+.spinner {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: whitesmoke;
+  opacity: 0.9;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: disappear 200ms 4s forwards;
+  transform-origin: top;
+}
+.spinner::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid #9356DC;
+  border-top: 5px solid #FF79DA;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out;
+  animation-iteration-count: 2;
+}
+
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .mainheader {
   position: relative;
   width: 100%;
@@ -942,21 +900,6 @@ main .restau-cards:hover {
     transform: rotateZ(0deg);
   }
 }
-@keyframes loader {
-  0% {
-    visibility: visible;
-    opacity: 1;
-    z-index: 9999;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1;
-  }
-}
 @keyframes rotate-grad {
   from {
     -webkit-filter: hue-rotate(0deg);
@@ -966,57 +909,38 @@ main .restau-cards:hover {
   }
 }
 .spinner {
-  margin: 100px auto 0;
-  width: 70px;
-  text-align: center;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: whitesmoke;
+  opacity: 0.9;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: disappear 200ms 4s forwards;
+  transform-origin: top;
+}
+.spinner::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid #9356DC;
+  border-top: 5px solid #FF79DA;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out;
+  animation-iteration-count: 2;
 }
 
-.spinner > div {
-  width: 18px;
-  height: 18px;
-  background-color: #9356dc;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-}
-
-.spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-  background-color: #ff79da;
-}
-
-.spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-  background-color: #99e2d0;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0);
-  }
-  40% {
-    -webkit-transform: scale(1);
-  }
-}
-@keyframes sk-bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0);
+@keyframes disappear {
+  to {
     transform: scale(0);
   }
-  40% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
-/* html 
-  <div class="spinner">
-  <div class="bounce1"></div>
-  <div class="bounce2"></div>
-  <div class="bounce3"></div>
-</div>*/
 .footer {
   align-items: center;
   background-color: black;
