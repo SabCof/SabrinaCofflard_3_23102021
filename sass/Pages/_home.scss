@@ -133,29 +133,11 @@ main {
 			overflow: auto;
 			margin: 2em 0.5em;
 			position: relative;
-			
+			background-color: white;
 			transition: all .2s ease-in-out;
 			
 			
-			i {
-				bottom: 1em;
-				
-				cursor: pointer;
-				font-size: 25px;
-				position: absolute;
-				right: 1em;
-			}
-			.fas {
-				color: transparent;
-				background-image: linear-gradient($primary, $secondary);
-				background-clip: text;
-				-webkit-background-clip: text;
-				opacity: 0;
-			}	
-
-			&:hover .fas {
-				opacity: 1;	
-				}
+			
 			
 
 			&-new {
@@ -187,6 +169,7 @@ main {
 				color: black;
 				margin: 0 0 .5em 1.2em;
 				text-decoration: none;
+				@include heart-animated;
 			}
 
 			&:hover {

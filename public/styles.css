@@ -5,11 +5,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 body {
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: black;
   font-size: 1.5rem;
   font-weight: 400;
   list-style: none;
+  background-color: white;
   width: 100%;
 }
 
@@ -46,17 +48,6 @@ a {
 
 html {
   font-size: 62.5%;
-}
-
-body {
-  box-sizing: border-box;
-  width: 100%;
-  background: white;
-}
-
-h2 {
-  color: black;
-  font-size: 30px;
 }
 
 input {
@@ -289,17 +280,6 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  box-sizing: border-box;
-  width: 100%;
-  background: white;
-}
-
-h2 {
-  color: black;
-  font-size: 30px;
-}
-
 input {
   display: none;
 }
@@ -319,11 +299,13 @@ input {
 }
 
 body {
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: black;
   font-size: 1.5rem;
   font-weight: 400;
   list-style: none;
+  background-color: white;
   width: 100%;
 }
 
@@ -641,17 +623,6 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  box-sizing: border-box;
-  width: 100%;
-  background: white;
-}
-
-h2 {
-  color: black;
-  font-size: 30px;
-}
-
 input {
   display: none;
 }
@@ -671,11 +642,13 @@ input {
 }
 
 body {
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: black;
   font-size: 1.5rem;
   font-weight: 400;
   list-style: none;
+  background-color: white;
   width: 100%;
 }
 
@@ -853,24 +826,8 @@ main .restau-cards {
   overflow: auto;
   margin: 2em 0.5em;
   position: relative;
+  background-color: white;
   transition: all 0.2s ease-in-out;
-}
-main .restau-cards i {
-  bottom: 1em;
-  cursor: pointer;
-  font-size: 25px;
-  position: absolute;
-  right: 1em;
-}
-main .restau-cards .fas {
-  color: transparent;
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-}
-main .restau-cards:hover .fas {
-  opacity: 1;
 }
 main .restau-cards-new {
   background-color: #99E2D0;
@@ -898,6 +855,54 @@ main .restau-cards-desc {
   color: black;
   margin: 0 0 0.5em 1.2em;
   text-decoration: none;
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+main .restau-cards-desc::before {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+main .restau-cards-desc::after {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+}
+main .restau-cards-desc:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
 }
 main .restau-cards:hover {
   transform: scale(1.02);
