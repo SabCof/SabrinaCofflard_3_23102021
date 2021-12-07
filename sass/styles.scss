@@ -1,8 +1,14 @@
-@import "./Base/typography", "./Base/reset";
-@import "./Components/btn", "./Components/heart";
+@import "./Base/typography",
+         "./Base/reset";
+@import "./Components/btn"; 
 
 @import "./Pages/resto", "./Pages/home";
-@import "./Utils/animations", "./Utils/mixins","./Utils/variables", "./Utils/loader.scss","./Utils/footer.scss" ; 
+@import "./Utils/animations",
+ "./Utils/mixins",
+ "./Utils/variables",
+  "./Utils/loader.scss",
+  "./Utils/footer.scss" ,
+  "./Utils/header.scss"; 
 
 
 

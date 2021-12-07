@@ -6,7 +6,7 @@
   "../Utils/footer.scss";
 @import "../Base/reset", "../Base/typography";
 
-@import "../Components/btn", "../Components/heart";
+@import "../Components/btn";
 
 
 body {
@@ -89,7 +89,7 @@ body {
           background-color: white;
           border-radius: 1rem;
           overflow: hidden;
-          margin: 2.5rem;
+          margin: 2.5rem 0;
           @include box-shadow;
           animation: appear 1s;
           animation-fill-mode: both;
