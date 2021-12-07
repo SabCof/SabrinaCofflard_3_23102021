@@ -3,251 +3,150 @@
 
 @import "../Components/btn", "../Components/heart";
 
-.mainheader{
-    position: relative;
-    width: 100%;
-    padding: 1rem 1rem 0.2rem 1rem;
-    border-bottom: 2px solid #d5d5d5;
-    text-align: center;
-    i {
-        color: black;
-        left: 2em;
-        position: absolute;
-        top: 1.5em;
-        transition: all .2s ease-in-out;
 
-        &::after {
-            color: $primary;
-            content: "Accueil";
-            font-family: 'Roboto';
-            left: 1.5em;
-            opacity: 0;
-            position: absolute;
-            visibility: hidden;
-            transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
-        }
-        
-        &:hover {
-            color: $primary;
-            transform: scale(1.1);
-
-            &::after {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
+body {
+    background-color: #D5DBDB;
+  }
+  
+  #page-resto {
+    header {
+      &:hover::before {
+        @include transform-zoom($zoom-level: 1.2, $transformation: translateY(-50%));
+      }
+      &::before {
+        @include font-awesome($font-weight: 900);
+        content: "\f060";
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        transition: transform 200ms;
+      }
     }
-}
-
-main {
-    .introduction {
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 22em;
-
-        &[data-background='1'] {
-            background-image: url(/images/restaurants/La\ Palette\ du\ gout-1.png);
-        }
-        &[data-background='2'] {
-            background-image: url(/images/restaurants/La\ note\ enchantée-1.png);
-        }
-        &[data-background='3'] {
-            background-image: url(/images/restaurants/A\ la\ française-1.png);
-        }
-        &[data-background='4'] {
-            background-image: url(/images/restaurants/Le\ délice\ des\ sens-1.png);
-        }
+  
+    .banner img {
+      display: block;
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+      object-position: center;
     }
-
-    .menu {
-        display: flex;
-        flex-direction: column;
+  
+    .resto__title {
+      margin-top: -2rem;
+      h2 {
+        font-family: "Shrikhand", "cursive";
+        padding: 2rem 1rem;
+        @include heart-animated;
+        border-radius: 2rem 2rem 0 0;
         background-color: $bg-grey;
-        border-radius: 60px 60px 0 0;
-        margin-top: -3em;
-
-        &-title {
-            padding: 1em 0 0 1em;
-            position: relative;
-            width: 100%;
-
+      }
+    }
+  
+    .resto-main {
+      padding: 0 1rem;
+      background-color: $bg-grey;
+    }
+    .menus {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      @media (max-width: $bg-grey) {
+        grid-template-columns: 1fr;
+      }
+      h3 {
+        text-transform: uppercase;
+        font-weight: 400;
+        position: relative;
+        margin-bottom: 1rem;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 1.5rem;
+          left: 0;
+          height: 0.25rem;
+          width: 3rem;
+          background-color: $tertiary;
+        }
+      }
+      .menus__category {
+        overflow: hidden;
+  
+        .menu-item {
+         
+          $numberOfItems: 3;
+          @for $i from 1 through $numberOfItems {
+            &:nth-child(#{$i}) {
+              animation-delay: 100ms * $i;
+            }
+          }
+          display: flex;
+          background-color: white;
+          border-radius: 1rem;
+          overflow: hidden;
+          margin: 2.5rem;
+          @include box-shadow;
+          animation: appear 1s;
+          animation-fill-mode: both;
+  
+          .menu-item__price {
+            margin-left: auto;
+            font-weight: 900;
+            padding: 1rem;
+            display: flex;
+            align-items: flex-end;
+          }
+          .menu-item__description {
+            padding: 1rem;
+            overflow: hidden;
+            h4,
+            p {
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+          .menu-item__check {
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            $button-width: 4rem;
+            border-radius: 0 1rem 1rem 0;
+            background-color: $tertiary;
+            margin-right: -1 * $button-width;
+            width: $button-width;
+            transition: margin-right 0.5s;
             i {
-                bottom: .4em;
-                color: black;
-                cursor: pointer;
-                font-size: 35px;
-                position: absolute;
-                right: 2em;
-                transition: all .2s ease-in-out;
-
-                }
-                .fas {
-                    color: transparent;
-                    background-image: linear-gradient($primary, $secondary);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    opacity: 0;
-                }	
-    
-                &:hover .fas {
-                    opacity: 1;	
-                    }
-        }
-        &-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 2em 0 2em 0;
-
-            &-title {
-                font-weight: 400;
-                padding: 0 0 1em 1.8em;
-                position: relative;
-                text-transform: uppercase;
-                width: 100%;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    width: 2.5em;
-                    left: 1.85em;
-                    height: 3px;
-                    border-radius: 2px;
-                    background-color: $tertiary;
-                }
+              $size: 2rem;
+              display: grid;
+              place-items: center;
+              background: white;
+              height: $size;
+              width: $size;
+              border-radius: 1rem;
+              color: $tertiary;
             }
-
-            &-cards {
-                margin: 0 1rem 1rem 0;
-                background-color: $bg-white;
-                height: 6rem;
-                width: 100%;
-                border-radius: 25px;
-                box-shadow: 0 5px 15px $shadow;
-                position: relative;
-                overflow: hidden;
-                padding: 1em 1em;
-                animation: show .5s ease-in-out;
-                animation-fill-mode: backwards;
-                transition: all .2s ease-in-out;
-                max-width: 28%;
-                
-                cursor: pointer;
-                
-                @for $i from 2 through 4 {
-                    &:nth-child(#{$i + 1}){
-                        animation-delay: 0.2s * $i;
-                    }
-                }
-
-                &-info {
-                    max-width: 100%;
-                    width: 100%;
-                }
-                
-                &-title {
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 1;
-                    -webkit-box-orient: vertical;
-                }
-
-                &-subtitle {
-                    display: flex;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 1;
-                    -webkit-box-orient: vertical;
-                }
-                &-price {
-                   
-                    bottom: 2rem;
-                    position: absolute;
-                    right: 5%;
-                }
-                &-check {
-                    right: -30%;
-                    bottom: 0rem;
-                    display: flex;
-                    align-items: center;
-                    position: absolute;
-                    justify-content: center;
-                    background-color: #99e2d0;
-                    width: 25%;
-                    height: 6rem;
-                    border-radius: 25px;
-                    margin-right: 5%;
-                     
-                     
-                     } 
-                &:hover.section__menu-container-cards-check {
-                    margin-right: -25%;
-                         
-                    i {
-                        justify-content: center;
-                         display: flex;
-                        align-items:center;
-                        color:white;
-                        font-size: 30px;
-                        transition: all .4s .2s ease-in-out;
-                    }
-                }
-                input:checked ~ .section__menu-container-cards-check {
-                    margin: -1em -1em -1em .5em;
-
-                    i {
-                        animation: checked 1s 1 ease-in-out;
-                    }
-                }
-
-                &:hover {
-
-                    transform: scale(1.02);
-                }
+          }
+          &:hover {
+            cursor: pointer;
+            .menu-item__check {
+              margin-right: 0;
             }
+            i {
+              @include quarterspin;
+              animation: quarterspin 0.5s ease-in-out;
+            }
+          }
         }
-
-        &-buy {
-            display: flex;
-            justify-content: center;
-            padding: 0 0 2em 0;
-        }
-        .btn {
-            
-        justify-items: center; 
-        padding: 1rem 2rem;
-        }    
+      }
     }
-}
-
-
-// Responsive
-
-@media screen and (max-width: $tablet) {
-
-.menu {
-&-container {
-    flex-direction: column;
-    padding: 2em 2em 0 2em !important;
-
-    &-title {
-        padding: 0 0 1em 0 !important;
-
-        &::before {
-            left: 0 !important;
-        }
+  
+    section.order {
+      height: 30vh;
+      display: grid;
+      place-items: center;
+      button {
+        @include base-button;
+      }
     }
-
-    &-cards {
-        margin: 0 0 2em 0;
-        max-width: 100% !important;
-    }
-}
-}
-
-}
+  }
