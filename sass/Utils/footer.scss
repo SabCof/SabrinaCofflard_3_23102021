@@ -38,7 +38,7 @@
 
 // Responsive
 
-@media screen and (max-width: 768px) {
+@media screen and ($desktop) {
 
     .footer {
         &-link {
@@ -50,7 +50,7 @@
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 425px) {
 
     .footer {
         align-items: flex-start;

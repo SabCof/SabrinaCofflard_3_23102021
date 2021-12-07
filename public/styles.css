@@ -16,7 +16,7 @@ body {
 h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 900;
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 a {
@@ -164,6 +164,63 @@ input {
     transform: rotate(360deg);
   }
 }
+header {
+  background-color: white;
+  box-shadow: 0 0 10px #EAEDED;
+  display: flex;
+  height: 4em;
+  justify-content: center;
+  padding: 1em;
+  position: fixed;
+  width: 100%;
+  z-index: 800;
+}
+header a:last-child {
+  animation: rotate-grad 20s infinite linear;
+  background-image: linear-gradient(45deg, #9356DC, #FF79DA);
+  background-size: 100%;
+  background-repeat: repeat;
+  font-family: "Shrikhand", cursive;
+  font-size: 3.5rem;
+  height: fit-content;
+  margin-top: -0.2em;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+header i {
+  color: black;
+  left: 2em;
+  position: absolute;
+  top: 1.5em;
+  transition: all 0.2s ease-in-out;
+}
+header i::after {
+  color: #9356DC;
+  content: "Accueil";
+  font-family: "Roboto";
+  left: 1.5em;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+header i:hover {
+  color: #9356DC;
+  transform: scale(1.1);
+}
+header i:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 769px) {
+  .header i:hover::after {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .footer {
   align-items: center;
   background-color: black;
@@ -192,13 +249,13 @@ input {
   color: white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (1440px) {
   .footer-link-logo {
     width: 100%;
     max-width: 100%;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 425px) {
   .footer {
     align-items: flex-start;
     flex-direction: column;
@@ -268,7 +325,7 @@ body {
 h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 900;
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 a {
@@ -296,31 +353,21 @@ body {
   background-color: #D5DBDB;
 }
 
-#page-resto header:hover::before {
-  transform: translateY(-50%) scale(1.2);
-}
-#page-resto header::before {
-  display: inline-block;
-  position: absolute;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f060";
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 20px;
-  transition: transform 200ms;
-}
 #page-resto .banner img {
-  display: block;
   width: 100%;
-  height: 70vh;
+  height: 15em;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
-  object-position: center;
+}
+@media (min-width: 1440px) {
+  #page-resto .banner img {
+    display: block;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 #page-resto .resto__title {
   margin-top: -2rem;
@@ -388,7 +435,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-@media (max-width: #EAEDED) {
+@media (max-width: 1024px) {
   #page-resto .menus {
     grid-template-columns: 1fr;
   }
@@ -402,10 +449,10 @@ body {
 #page-resto .menus h3::after {
   content: "";
   position: absolute;
-  top: 1.5rem;
+  top: 2.5rem;
   left: 0;
   height: 0.25rem;
-  width: 3rem;
+  width: 4rem;
   background-color: #99E2D0;
 }
 #page-resto .menus .menus__category {
@@ -438,7 +485,7 @@ body {
   align-items: flex-end;
 }
 #page-resto .menus .menus__category .menu-item .menu-item__description {
-  padding: 1rem;
+  padding: 1.5rem;
   overflow: hidden;
 }
 #page-resto .menus .menus__category .menu-item .menu-item__description h4,
@@ -484,26 +531,9 @@ body {
   }
 }
 #page-resto section.order {
-  height: 30vh;
+  height: 10vh;
   display: grid;
   place-items: center;
-}
-#page-resto section.order button {
-  color: white;
-  font-weight: 300;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 2rem;
-  transition: transform 200ms;
-  margin-top: 1rem;
-  cursor: pointer;
-  box-shadow: 2px 1px 8px -3px #adaca7;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-}
-#page-resto section.order button:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
 }
 
 @keyframes show {
@@ -642,7 +672,7 @@ body {
 h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 900;
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 a {
@@ -998,13 +1028,13 @@ main .restau-cards:hover {
   color: white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (1440px) {
   .footer-link-logo {
     width: 100%;
     max-width: 100%;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 425px) {
   .footer {
     align-items: flex-start;
     flex-direction: column;

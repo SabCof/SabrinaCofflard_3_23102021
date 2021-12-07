@@ -1,8 +1,74 @@
 header {
-    
-		position: relative;
-		width: 100%;
-		padding: 1rem 1rem 0.2rem 1rem;
-		border-bottom: 2px solid #d5d5d5;
-		text-align: center;
-	  }
+    background-color: $bg-white;
+    box-shadow: 0 0 10px $bg-grey;
+    display: flex;
+    height: 4em;
+    justify-content: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    z-index: 800;
+
+    a {
+        &:last-child {
+            animation: rotate-grad 20s infinite linear;
+            background-image: linear-gradient(45deg, $primary, $secondary);
+            background-size: 100%;
+            background-repeat: repeat;
+            font-family: 'Shrikhand', cursive;
+            font-size: 3.5rem;
+            height: fit-content;
+            margin-top: -.2em;
+            padding-left: .1em;
+            padding-right: .1em;
+            
+            -webkit-text-fill-color: transparent; 
+           
+            -moz-text-fill-color: transparent;
+        }
+    }
+
+    i {
+        color:black;
+        left: 2em;
+        position: absolute;
+        top: 1.5em;
+        transition: all .2s ease-in-out;
+
+        &::after {
+            color: $primary;
+            content: "Accueil";
+            font-family: 'Roboto';
+            left: 1.5em;
+            opacity: 0;
+            position: absolute;
+            visibility: hidden;
+            transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+        }
+        
+        &:hover {
+            color: $primary;
+            transform: scale(1.1);
+
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $phone) {
+
+    .header {
+        i {
+
+            &:hover {
+                &::after {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+}

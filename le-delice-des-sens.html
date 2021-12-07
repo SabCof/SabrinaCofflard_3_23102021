@@ -12,110 +12,135 @@
         <link rel="stylesheet" href="public/styles.css" >
         <title>Menu Le Délice des Sens</title>
     </head>
-    <body>
+    <body id="page-resto">
         <header class="mainheader">
-            <a href="index.html">
+            <a href="/index.html">
                 <i class=" fas fa-arrow-left"></i>  
             </a>
             <h1>ohmyfood</h1>
         </header>
-        <main>
-            <section class="introduction" data-background="4"></section>
-            
-            <section class="menu">
-                <h2 class="menu-title">Le délice des Sens <i class="far fa-heart"></i></h2>
-        
-                <section class="menu-container"> 
-                    <h3 class="menu-container-title">
-                        ENTREES
-                    </h3>
-                    <article class="menu-container-cards" for="entree1">
-                        <input type="radio" id="entree1" name="entree" value="1">
-                        <h4 class="menu-container-cards-info">
-                            <b class="menu-container-cards-title">Tartare de thon</b></h3>
-                            <p class="menu-container-cards-subtitle">Assaisonné au yuzu</p>
-                            <div class="menu-container-cards-price">25€</div>
-                    <div class="menu-container-cards-check"><i class="fas fa-check-circle"></i></div>
-                </article>
-                <article class="menu-container-cards" for="entree2">
-                    <input type="radio" id="entree2" name="entree" value="2">
-                    <h4 class="menu-container-cards-info">
-                        <b class="menu-container-cards-title">Bouchée de homard croustillant </b></h3>
-                    <p class="menu-container-cards-subtitle">Et sa farandole de petits légumes</p>
-                    <div class="menu-container-cards-price">35€</div> 
-                    <div class="menu-container-cards-check"><i class="fas fa-check-circle"></i></div>  
-                </article>
-                <article class="menu-container-cards" for="entree3">
-                    <input type="radio" id="entree3" name="entree" value="3">
-                    <h4 class="menu-container-cards-info">
-                        <b class="menu-container-cards-title">Velouté de cèpes </b></h3>
-                        <p class="menu-container-cards-subtitle">Aux truffes</p>
-                        <div class="menu-container-cards-price">20€</div>
-                    <div class="menu-container-cards-check"><i class="fas fa-check-circle"></i></div>
-                </article>
-            </section>
-
-            <section class="menu-container">
-                <h3 class="menu-container-title">
-                    PLATS
-                </h3>
-                <article class="menu-container-cards" for="plats1">
-                    <input type="radio" id="entree1" name="plat" value="1">
-                    <h4 class="menu-container-cards-info">
-                        <b class="menu-container-cards-title">Poulet rôti aux herbes de Provence</b></h3>
-                        <p class="menu-container-cards-subtitle">Et sa crème de truffe</p>
-                        <div class="menu-container-cards-price">40€</div>
-                    <div class="menu-container-cards-check"><i class="fas fa-check-circle"></i></div>
-                </article>
-                <article class="menu-container-cards" for="plats2">
-                    <input type="radio" id="entree2" name="plat" value="2">
-                    <h4 class="menu-container-cards-info">
-                        <b class="menu-container-cards-title">Langouste rôtie </b></h4>
-                        <p class="menu-container-cards-subtitle">Et ses légumes de saison</p>
-                        <div class="menu-container-cards-price">35€</div>
-                    <div class="menu-container-cards-check"><i class="fas fa-check-circle"></i></div>
-                </article>
-                <article class="menu-container-cards" for="plats3">
-                    <input type="radio" id="entree3" name="plat" value="3">
-                    <h4 class="menu-container-cards-info">
-                        <b class="menu-container-cards-title">Côte de boeuf Angus</b></h3>
-                        <p class="menu-container-cards-subtitle">Et sa purée de panais</p>
-                        <div class="menu-container-cards-price">44€</div>
-                    <div class="menu-container-cards-check"><i class="fas fa-check-circle"></i></div>
-                </article>
-            </section>
-
-            <section class="menu-container" >
-                <h3 class="menu-container-title">
-                    DESSERTS
-                </h3>
-                <article class="menu-container-cards" for="desserts1">
-                        <input type="radio" id="desserts1" name="dessert" value="1"> 
-                    <h4 class="menu-container-cards-info">
-                        <b class="menu-container-cards-title">Farandole de desserts</b></h3>
-                        <p class="menu-container-cards-subtitle">Du chef</p>
-                        <div class="menu-container-cards-price">18€</div>
-                    <div class="menu-container-cards-check"><i class="fas fa-check-circle"></i></div>
-                </article>
-                <article class="menu-container-cards" for="desserts2">
-                    <input type="radio" id="desserts2" name="dessert" value="2">
-                    <h4 class="menu-container-cards-info">
-                        <b class="menu-container-cards-title">Crème brulée </b></h3>
-                        <p class="menu-container-cards-subtitle">Revisitée </p>
-                        <div class="menu-container-cards-price">22€</div>
-                    <div class="menu-container-cards-check"><i class="fas fa-check-circle"></i></div>
-                </article>
-                <article class="menu-container-cards" for="desserts3">
-                    <input type="radio" id="desserts3" name="dessert" value="3">
-                    <h4 class="menu-container-cards-info">
-                        <b class="menu-container-cards-title">Tiramisu</b></h3>
-                        <p class="menu-container-cards-subtitle">À la noisette</p>
-                        <div class="menu-container-cards-price">23€ </div>
-                    <div class="menu-container-cards-check"><i class="fas fa-check-circle"></i></div>
-                </article>
-            </section>
-
-            <div class="btn"type="submit"> Commander</div>
+    
+        <div class="banner"><img src="images/restaurants/Le délice des sens-1.png" alt=""></div>
+        <div class="resto__title">
+          <h2>Le délice des sens</h2>
+        </div>
+    
+        <main class="resto-main">
+          <section class="menus">
+            <div class="menus__category">
+              <h3>Entrées</h3>
+              <div class="menu__category__list">
+                <div class="menu-item">
+                  <div class="menu-item__description">
+                    <h4>Tartare de thon</h4>
+                    <p>Assaisonné au yuzu</p>
+                  </div>
+                  <span class="menu-item__price">25€</span>
+                  <div class="menu-item__check">
+                    <i class="fas fa-check"></i>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__description">
+                    <h4>Bouchée de homard croustillant</h4>
+                    <p>Et sa farandole de petits légumes</p>
+                  </div>
+                  <span class="menu-item__price">35€</span>
+                  <div class="menu-item__check">
+                    <i class="fas fa-check"></i>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__description">
+                    <h4>Velouté de cèpes</h4>
+                    <p>Aux truffes</p>
+                  </div>
+                  <span class="menu-item__price">20€</span>
+                  <div class="menu-item__check">
+                    <i class="fas fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="menus__category">
+              <h3>Plats</h3>
+              <div class="menu__category__list">
+                <div class="menu-item">
+                  <div class="menu-item__description">
+                    <h4>Poulet rôti aux herbes de Provence</h4>
+                    <p>Et sa crème de truffe</p>
+                  </div>
+                  <span class="menu-item__price">40€</span>
+                  <div class="menu-item__check">
+                    <i class="fas fa-check"></i>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__description">
+                    <h4>Langouste rôtief</h4>
+                    <p>Et ses légumes de saison</p>
+                  </div>
+                  <span class="menu-item__price">35€</span>
+                  <div class="menu-item__check">
+                    <i class="fas fa-check"></i>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__description">
+                    <h4>Côte de boeuf Angus</h4>
+                    <p>Et sa purée de panais</p>
+                  </div>
+                  <span class="menu-item__price">44€</span>
+                  <div class="menu-item__check">
+                    <i class="fas fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="menus__category">
+              <h3>Desserts</h3>
+              <div class="menu__category__list">
+                <div class=" menu-item">
+                  <div class="menu-item__description">
+                    <h4>Farandole de desserts</h4>
+                    <p>Du chef</p>
+                  </div>
+                  <span class="menu-item__price">18€</span>
+                  <div class="menu-item__check">
+                    <i class="fas fa-check"></i>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__description">
+                    <h4>Crème brulée</h4>
+                    <p>Revisitée</p>
+                  </div>
+                  <span class="menu-item__price">22€</span>
+                  <div class="menu-item__check">
+                    <i class="fas fa-check"></i>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__description">
+                    <h4>Tiramisu</h4>
+                    <p>À la noisette</p>
+                  </div>
+                  <span class="menu-item__price">23€</span>
+                  <div class="menu-item__check">
+                    <i class="fas fa-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+          <section class="order">
+            <a href="#commander"class="btn"type="submit"> Commander</a>
+          </section>
+    
+    
         </main>
         <footer class="footer">
             <h1 class="footer-link-logo">ohmyfood</h1>
