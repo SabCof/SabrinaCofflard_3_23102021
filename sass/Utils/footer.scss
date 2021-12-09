@@ -1,4 +1,5 @@
 .footer {
+    margin-top: auto;
     align-items: center;
     background-color: black;
     display: flex;
@@ -38,17 +39,7 @@
 
 // Responsive
 
-@media screen and ($desktop) {
 
-    .footer {
-        &-link {
-            &-logo {
-                width: 100%;
-                max-width: 100%;
-            }
-        }
-    }
-}
 
 @media screen and (max-width: 425px) {
 
