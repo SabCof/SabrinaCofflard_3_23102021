@@ -1,8 +1,6 @@
-@import "./Base/typography",
-         "./Base/reset";
+@import "./Base/typography";
+@import "./Base/reset";
 @import "./Components/btn"; 
-
-@import "./Pages/resto", "./Pages/home";
 @import "./Utils/animations",
  "./Utils/mixins",
  "./Utils/variables",
@@ -10,6 +8,8 @@
   "./Utils/footer.scss" ,
   "./Utils/header.scss"; 
 
+
+@import "./Pages/resto", "./Pages/home";
 
 
 

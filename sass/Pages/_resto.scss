@@ -1,12 +1,4 @@
-@import "../Utils/variables",
- "../Utils/animations",
-  "../Utils/mixins",
-  "../Utils/loader.scss",
-  "../Utils/header.scss",
-  "../Utils/footer.scss";
-@import "../Base/reset", "../Base/typography";
 
-@import "../Components/btn";
 
 
 body {
@@ -54,7 +46,8 @@ body {
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
       @media (max-width:$tablet) {
-        grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
+     
       }
       h3 {
         
@@ -78,7 +71,7 @@ body {
        
        
         .menu-item {
-         
+         // boucle pour animation //
           $numberOfItems: 3;
           @for $i from 1 through $numberOfItems {
             &:nth-child(#{$i}) {
