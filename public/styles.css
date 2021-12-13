@@ -339,7 +339,7 @@ body {
   overflow: hidden;
   margin: 2.5rem 0;
   box-shadow: 2px 1px 8px -3px #adaca7;
-  animation: appear 1s;
+  animation: appear 3s;
   animation-fill-mode: both;
 }
 #page-resto .menus .menus__category .menu-item:nth-child(1) {

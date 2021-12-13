@@ -76,6 +76,7 @@ body {
           @for $i from 1 through $numberOfItems {
             &:nth-child(#{$i}) {
               animation-delay: 100ms * $i;
+              
             }
           }
           display: flex;
@@ -84,7 +85,7 @@ body {
           overflow: hidden;
           margin: 2.5rem 0;
           @include box-shadow;
-          animation: appear 1s;
+          animation: appear 3s;
           animation-fill-mode: both;
   
           .menu-item__price {
