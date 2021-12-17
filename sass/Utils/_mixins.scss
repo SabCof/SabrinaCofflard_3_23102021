@@ -8,8 +8,6 @@
   @mixin box-shadow {
     box-shadow: 2px 1px 8px -3px $shadow;
   }  
-
-  
   @mixin font-awesome($font-weight: 400) {
     display: inline-block;
     position: absolute;
@@ -22,6 +20,8 @@
   }
   @mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
     @include font-awesome($font-weight);
+ 
+    
     content: "\f004";
     font-size: 2rem;
     right: 1rem;

@@ -15,5 +15,6 @@
     &:hover {
         box-shadow: 5px 5px 12px #e7e5df;
         transform: translateY(-.2em);
+        filter: brightness(1.3);
     }
 }
