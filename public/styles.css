@@ -427,7 +427,7 @@ body {
 
 main .recherche {
   align-items: center;
-  background-color: #D5DBDB;
+  background-color: #989e9e;
   display: flex;
   justify-content: center;
   padding: 1em;
@@ -532,7 +532,7 @@ main .restau-cards {
 main .restau-cards-new {
   background-color: #99E2D0;
   border-radius: 5px;
-  color: #0cd6a4;
+  color: #0e8164;
   padding: 0.5em;
   position: absolute;
   right: 1.5em;
